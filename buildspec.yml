@@ -13,6 +13,8 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Docker image is building...         
+      - npm install express
+      - npm install prom-client  
       - docker build -t $REPOSITORY_URL:latest .
       - docker tag $REPOSITORY_URL:latest $REPOSITORY_URL:$IMAGE_TAG    
   post_build:
