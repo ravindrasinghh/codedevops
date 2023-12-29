@@ -2,7 +2,7 @@ FROM node:16.18
 
 WORKDIR /usr/src/app
 
-COPY package*.json ./ 
+COPY . .
 
 RUN npm ci --only=production
 
