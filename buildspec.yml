@@ -15,6 +15,7 @@ phases:
       - echo Docker image is building... 
       - npm --version
       - npm install
+      - npm install express
       - docker build -t $REPOSITORY_URL:latest .
       - docker tag $REPOSITORY_URL:latest $REPOSITORY_URL:$IMAGE_TAG    
   post_build:
